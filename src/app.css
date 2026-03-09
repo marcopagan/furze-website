@@ -1,0 +1,52 @@
+
+
+/* FONTS */
+@font-face {
+    font-family: Junicode;
+    src: url('/fonts/Junicode.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Junicode;
+    src: url('/fonts/Junicode-Italic.ttf') format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: Junicode;
+    src: url('/fonts/Junicode-Bold.ttf') format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Junicode;
+    src: url('/fonts/Junicode-BoldItalic.ttf') format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* GENERAL */
+:root{
+    --bg: #FAF0E6;
+    --fg: #000000;
+    --acc: #FFE736;
+    --mainFont: 'Junicode', Garamond, serif
+}
+
+*{margin: 0; padding: 0;}
+
+body{
+    font-family: var(--mainFont);
+    background-color: var(--bg);
+    background-color: #FFF;
+    color: var(--fg);
+}
+main, main img{
+    max-height: 100vh;
+    max-height: 100dvh;
+}
+
+main img{
+    width: auto;
+}
