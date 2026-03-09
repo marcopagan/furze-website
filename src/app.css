@@ -42,11 +42,13 @@ body{
     background-color: #FFF;
     color: var(--fg);
 }
-main, main img{
+main{
     max-height: 100vh;
     max-height: 100dvh;
 }
 
 main img{
     width: auto;
+    max-height: 100vh;
+    max-height: 100dvh;
 }

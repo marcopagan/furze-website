@@ -103,6 +103,8 @@
 		scrollbar-width: none; /* Firefox */
 		-ms-overflow-style: none; /* IE/Edge */
 		scroll-behavior: smooth;
+		max-height: calc(100vh);
+		max-height: calc(100dvh);
 	}
 
 	.carousel-container::-webkit-scrollbar {
