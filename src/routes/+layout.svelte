@@ -20,7 +20,7 @@
 	<meta property="og:description" content="Furze Arts was founded in 2025 as an artist-led platform for residencies, site-specific exhibitions, and research-based workshops. It aims to create frameworks where art becomes a tool for ecological awareness and collective participation.">
 	<meta property="og:url" content="https://furzedomain.ext">
 	<meta property="og:site_name" content="Furze Arts">
-	<meta property="og:image" content="/pres.jpg">
+	<!--<meta property="og:image" content="/pres.jpg">-->
 	<meta name="apple-mobile-web-app-title" content="Furze Arts">
 	<meta name="application-name" content="Furze Arts">
 	<meta name="msapplication-TileColor" content="#FAF0E6">
