@@ -8,7 +8,9 @@
     const slides : Slide[] = [
         {image: "/imgs/IMG_0975.jpg", alt:"Furze"},
         {image: "/imgs/IMG_1011.jpg", alt:"Furze"},
-        {image: "/imgs/IMG_1055.jpg", alt:"Furze"}
+        {image: "/imgs/IMG_1055.jpg", alt:"Furze"},
+        {image: "/imgs/IMG_1165.jpg", alt:"Furze"},
+        {image: "/imgs/IMG_1314.jpg", alt:"Furze"}
     ];
     let visible = false
     onMount(() => {
@@ -28,8 +30,6 @@
 <main>
     <Carousel
         {slides}
-        autoplay
-        speed={2000}
     />
 </main>
 

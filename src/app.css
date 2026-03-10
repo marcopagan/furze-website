@@ -34,6 +34,9 @@
     --mainFont: 'Junicode', Garamond, serif
 }
 
+::selection {color: var(--acc)}
+::-moz-selection {color: var(--acc)}
+
 *{margin: 0; padding: 0;}
 
 body{

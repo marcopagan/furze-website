@@ -1,12 +1,12 @@
 <script lang="ts">
   let isOpen = $state(false);
-  import { slide } from 'svelte/transition';
+  import { fade, slide } from 'svelte/transition';
 </script>
 
 <aside class={isOpen ? 'open' : ''}>
     {#if isOpen}
-    <div class="col-logo" in:slide={{delay: 500}}>
-        <img src="/FURZE_logo-08.svg" alt="Furze logo" width="144">
+    <div class="col-logo" in:slide={{delay: 400}}>
+        <img src="/FURZE_logo-08.svg" alt="Furze logo" width="144" in:fade={{delay: 250}}>
     </div>
     {/if}
 
@@ -17,8 +17,8 @@
         </nav>
 
         {#if isOpen}
-        <div class="content" in:slide={{delay: 200}}>
-            <div class="col-text">
+        <div class="content" in:slide={{delay: 100}}>
+            <div class="col-text" in:fade={{delay: 250}}>
                 <div>
                     <p>Furze Arts was founded in 2025 as an artist-led platform for residencies, site-specific exhibitions, and research-based workshops. It aims to create frameworks where art becomes a tool for ecological awareness and collective participation. </p>
                     <p>Furze Arts is based on Hartwell farm in Kill, Kildare and works alongside Soearth Projects, an established space for creative arts therapies and environmental advocacy for the local community. Using the facilities and infrastructure of Soearth Projects, principally the Soearth Studio, Furze Arts aims to create space for encounters between the local community and an international cohort of artists.</p>
@@ -29,7 +29,7 @@
                     W91 YF6H, Ireland
                 </strong></p>
             </div>
-            <div class="col">
+            <div class="col" in:fade={{delay: 250}}>
                 <figure>
                     <img src="/imgs/furze-archive.jpeg" alt="Hartwell (1960)">
                     <figcaption>Hartwell, Circa 1960</figcaption>
@@ -94,6 +94,7 @@
         height: 2rem;
         font-size: 1.25rem;
         transition: all .3s;
+        cursor: pointer;
     }
 
     .open-btn{transform: rotate(45deg)}

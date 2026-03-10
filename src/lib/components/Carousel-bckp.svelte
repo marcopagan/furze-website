@@ -9,8 +9,8 @@
 
 	let { 
 		slides = [], 
-		autoplay = true, 
-		speed = 5000, 
+		autoplay = false, 
+		speed = 3000, 
 	}: Props = $props();
 
 	let currentIndex = $state<number>(0);
@@ -76,8 +76,6 @@
 		→
 	</button>
 
-	<span class="nav-text">{currentIndex+1}/{slides.length}</span>
-
 	<div class="dots-container">
 		{#each slides as _, i (_.image)}
 			<button
@@ -114,7 +112,7 @@
 	}
 
 	.carousel-slide {
-		flex: 0 0 100%;
+		/*flex: 0 0 100%;*/
 		width: 100%;
 		scroll-snap-align: start;
 	}
@@ -122,37 +120,32 @@
 	/* Navigation Buttons */
 	.nav-button {
 		position: absolute;
-		bottom: 1rem;
-		background: var(--bg);
+		top: 50%;
+		transform: translateY(-50%);
+		background: rgba(255, 255, 255, 0.8);
 		border: none;
 		border-radius: 50%;
-		width: 2rem;
-		height: 2rem;
+		width: 40px;
+		height: 40px;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		transition: opacity 0.3s, background 0.2s;
-		opacity: 0;
+		opacity: 0; /* Hidden by default */
 		z-index: 10;
 	}
 
 	.carousel-wrapper:hover .nav-button {
-		opacity: 1;
+		opacity: 1; /* Show on hover */
 	}
 
 	.nav-button:hover {
-		background: var(--acc);
+		background: var(--bg);
 	}
 
-	.nav-text{
-		position: absolute;
-		bottom: 1rem;
-		left: 1rem;
-		color: var(--bg);
-	}
-
-	.prev { right: 3.5rem; }
+	.prev { left: 1rem; }
 	.next { right: 1rem; }
 
 	/* Dots */
@@ -170,14 +163,14 @@
 		height: 10px;
 		border-radius: 50%;
 		border: none;
-		background: var(--bg);
+		background: #FAF0E6AA;
 		cursor: pointer;
 		transition: all 0.3s ease;
 		padding: 0;
 	}
 
 	.dot.active {
-		background: var(--acc);
-		transform: scale(1.25);
+		background: var(--bg);
+		transform: scale(1.3);
 	}
 </style>
