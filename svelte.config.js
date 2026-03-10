@@ -10,7 +10,7 @@ const config = {
 		appDir: 'app',
 		adapter: adapter(),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: '/furze-static'
 		}
 	},
 	preprocess: vitePreprocess()
