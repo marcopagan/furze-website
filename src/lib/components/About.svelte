@@ -1,6 +1,7 @@
 <script lang="ts">
   let isOpen = $state(false);
   import { fade, slide } from 'svelte/transition';
+  import { base } from '$app/paths';
 </script>
 
 <aside class={isOpen ? 'open' : ''}>
@@ -31,7 +32,7 @@
             </div>
             <div class="col" in:fade={{delay: 250}}>
                 <figure>
-                    <img src="/imgs/furze-archive.jpeg" alt="Hartwell (1960)">
+                    <img src={`${base}/imgs/furze-archive.jpeg`} alt="Hartwell (1960)">
                     <figcaption>Hartwell, Circa 1960</figcaption>
                 </figure>
             </div>
