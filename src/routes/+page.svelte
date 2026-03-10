@@ -10,7 +10,12 @@
         {image: "/imgs/IMG_1011.jpg", alt:"Furze"},
         {image: "/imgs/IMG_1055.jpg", alt:"Furze"},
         {image: "/imgs/IMG_1165.jpg", alt:"Furze"},
-        {image: "/imgs/IMG_1314.jpg", alt:"Furze"}
+        {image: "/imgs/IMG_1314.jpg", alt:"Furze"},
+        {image: "/imgs/IMG_1423.jpg", alt:"Furze"},
+        {image: "/imgs/IMG_1437.jpg", alt:"Furze"},
+        {image: "/imgs/IMG_1462.jpg", alt:"Furze"},
+        {image: "/imgs/IMG_1506.jpg", alt:"Furze"},
+        {image: "/imgs/IMG_1771.jpg", alt:"Furze"}
     ];
     let visible = false
     onMount(() => {

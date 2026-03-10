@@ -7,7 +7,7 @@
 <aside class={isOpen ? 'open' : ''}>
     {#if isOpen}
     <div class="col-logo" in:slide={{delay: 400}}>
-        <img src="/FURZE_logo-08.svg" alt="Furze logo" width="144" in:fade={{delay: 250}}>
+        <img src={`${base}/FURZE_logo-08.svg`} alt="Furze logo" width="144" in:fade={{delay: 250}}>
     </div>
     {/if}
 

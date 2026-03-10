@@ -11,7 +11,7 @@
 	let { 
 		slides = [], 
 		autoplay = true, 
-		speed = 5000, 
+		speed = 8000, 
 	}: Props = $props();
 
 	let currentIndex = $state<number>(0);
