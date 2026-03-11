@@ -1,6 +1,7 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 	import '../app.css';
+	import { base } from '$app/paths';
 
 	let { children } = $props();
 </script>
@@ -29,7 +30,7 @@
 	/>
 	<meta property="og:url" content="https://furzedomain.ext" />
 	<meta property="og:site_name" content="Furze Arts" />
-	<!--<meta property="og:image" content="/pres.jpg">-->
+	<meta property="og:image" content={`${base}/pres.jpg`}>
 	<meta name="apple-mobile-web-app-title" content="Furze Arts" />
 	<meta name="application-name" content="Furze Arts" />
 	<meta name="msapplication-TileColor" content="#FAF0E6" />
