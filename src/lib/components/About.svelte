@@ -7,7 +7,7 @@
 <aside class={isOpen ? 'open' : ''}>
     {#if isOpen}
     <div class="col-logo" in:slide={{delay: 400}}>
-        <img src={`${base}/FURZE_logo-08.svg`} alt="Furze logo" width="144" in:fade={{delay: 250}}>
+        <img src={`${base}/FURZE_logo-08.svg`} alt="Furze logo" width="114" in:fade={{delay: 250}}>
     </div>
     {/if}
 
@@ -57,7 +57,7 @@
     }
     aside{
         --asideWidth: 400px;
-        position: absolute; right: 0; top: 0;
+        position: absolute; left: 0; top: 0;
         background-color: var(--bg);
         max-height: calc(100vh);
         max-height: calc(100dvh);
@@ -74,7 +74,7 @@
         padding: 1rem;
         min-width: 25%;
         & img{
-            width: 144px;
+            width: 114px;
             height: auto;
         }
     }
