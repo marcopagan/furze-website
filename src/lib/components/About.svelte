@@ -22,10 +22,10 @@
             <div class="col-text" in:fade={{delay: 250}}>
                 <div>
                     <p>Furze Arts was founded in 2025 as an artist-led platform for residencies, site-specific exhibitions, and research-based workshops. It aims to create frameworks where art becomes a tool for ecological awareness and collective participation. </p>
-                    <p>Furze Arts is based on Hartwell farm in Kill, Kildare and works alongside Soearth Projects, an established space for creative arts therapies and environmental advocacy for the local community. Using the facilities and infrastructure of Soearth Projects, principally the Soearth Studio, Furze Arts aims to create space for encounters between the local community and an international cohort of artists.</p>
+                    <p>Furze Arts is based on Hartwell farm in Kill, Kildare and works alongside Soearth Projects, an established space for creative arts therapies and environmental advocacy for the local community. Within the context of rural Ireland Furze Arts aims to create space for encounters between the local community and an international cohort of artists.</p>
                 </div>
                 <p><strong>
-                    Info@furzearts.eu<br><br>
+                    info@furzearts.eu<br><br>
                     Hartwell Upper, Naas, Co. Kildare,<br>
                     W91 YF6H, Ireland
                 </strong></p>
@@ -81,7 +81,7 @@
 
     nav{
         display: flex;
-        min-width: 400px;
+        width: 36vw;
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
@@ -118,15 +118,17 @@
 
     img{width: 100%; height: auto;}
 
+
     @media (max-width: 900px) {
         .col-logo{display: none;}
     }
 
     @media (max-width: 576px) {
-        aside{width: 50%;}
+        aside{width: 100%;}
         .open{width: 100%;}
         nav{
-            min-width: calc(100% - 2rem);
+            width: calc(90%);
+            height: 24px;
             & h1{font-size: 1.5rem;}
         }
         .content{

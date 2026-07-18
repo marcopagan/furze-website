@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Slide } from '$lib/types/Slide';
+    import { onMount } from 'svelte';
     import { base } from '$app/paths';
 
     interface Props {
@@ -17,8 +18,9 @@
     let currentIndex = $state<number>(0);
     let container = $state<HTMLDivElement | undefined>();
     let interval: ReturnType<typeof setInterval> | undefined;
+    let isMobile = $state(false);
 
-    // NUOVA LOGICA: Troviamo l'elemento figlio e scorriamo verso di esso
+    // Troviamo l'elemento figlio e scorriamo verso di esso
     function scrollTo(index: number): void {
         if (!container) return;
         
@@ -36,10 +38,27 @@
     }
 
     const next = () => scrollTo(currentIndex + 1);
-    const prev = () => scrollTo(currentIndex - 1);
+    /*const prev = () => scrollTo(currentIndex - 1);*/
+
+    onMount(() => {
+		const media = window.matchMedia('(max-width: 576px)');
+		isMobile = media.matches;
+
+		const handleChange = (e: MediaQueryListEvent) => {
+			isMobile = e.matches;
+		};
+
+		media.addEventListener('change', handleChange);
+
+		return () => {
+			media.removeEventListener('change', handleChange);
+		};
+	});
+
+    $inspect(isMobile);
 
     $effect(() => {
-        if (autoplay) {
+        if (autoplay && !isMobile) {
             interval = setInterval(next, speed);
             return () => clearInterval(interval);
         }
@@ -81,11 +100,6 @@
         {/each}
     </div>
 
-    <button class="nav-button prev" onclick={prev}>←</button>
-    <button class="nav-button next" onclick={next}>→</button>
-
-    <span class="nav-text">{currentIndex+1}/{slides.length}</span>
-
     <div class="dots-container">
         {#each slides as _, i (_.image)}
             <button
@@ -93,6 +107,7 @@
                 class="dot"
                 class:active={currentIndex === i}
 				aria-label="Go to slide {i + 1}"
+                style={"view-transition-name: dot-" + i}
             ></button>
         {/each}
     </div>
@@ -135,7 +150,7 @@
     }
 
 	/* Navigation Buttons */
-	.nav-button {
+	/*.nav-button {
 		position: absolute;
 		bottom: 1rem;
 		background: var(--bg);
@@ -150,25 +165,11 @@
 		transition: opacity 0.3s, background 0.2s;
 		opacity: 0;
 		z-index: 10;
-	}
+	}*/
 
-	.carousel-wrapper:hover .nav-button {
+	.carousel-wrapper:hover {
 		opacity: 1;
 	}
-
-	.nav-button:hover {
-		background: var(--acc);
-	}
-
-	.nav-text{
-		position: absolute;
-		bottom: 1rem;
-		left: 1rem;
-		color: var(--bg);
-	}
-
-	.prev { right: 3.5rem; }
-	.next { right: 1rem; }
 
 	/* Dots */
 	.dots-container {

@@ -10,11 +10,11 @@
 
     const logoTimer = setTimeout(() => {
       showTree = true;
-    }, 1500);
+    }, 1000);
 
     const hideTimer = setTimeout(() => {
       visible = false;
-    }, 3000);
+    }, 4500);
 
     return () => {
       clearTimeout(logoTimer);
@@ -29,6 +29,10 @@
         <img src="FURZE_logo-01.svg" alt="Tree of the logo" in:fade={{ duration: 200 }}>
     {/if}
     <img src="FURZE_logo-02.svg" alt="Dots of the logo">
+    
+    <!--<svg width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" stroke="black" stroke-width="2" style="view-transition-name: dot-0"/>
+    </svg>-->
   </div>
 {/if}
 
