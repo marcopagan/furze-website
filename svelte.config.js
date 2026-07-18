@@ -10,7 +10,7 @@ const config = {
 		appDir: 'app',
 		adapter: adapter(),
 		paths: {
-			base: '/furze-static'
+			base: '/furze-website'
 		}
 	},
 	preprocess: vitePreprocess()
