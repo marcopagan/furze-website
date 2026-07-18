@@ -131,6 +131,7 @@
             }
             & .text-opencall{
                 padding: .5rem 1rem;
+                padding-bottom: 5rem;
                 font-size: 1.25rem;
                 & p{padding-bottom: 1.5rem}
                 & small{font-size: .75rem;}
