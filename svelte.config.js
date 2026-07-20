@@ -9,9 +9,9 @@ const config = {
 	kit: {
 		appDir: 'app',
 		adapter: adapter(),
-		paths: {
+		/*paths: {
 			base: '/furze-website'
-		}
+		}*/
 	},
 	preprocess: vitePreprocess()
 };

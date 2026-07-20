@@ -1,13 +1,13 @@
 <script lang="ts">
   let isOpen = $state(false);
   import { fade, slide } from 'svelte/transition';
-  import { base } from '$app/paths';
+  /*import { base } from '$app/paths';*/
 </script>
 
 <aside class={isOpen ? 'open' : ''}>
     {#if isOpen}
     <div class="col-logo" in:slide={{delay: 400}}>
-        <img src={`${base}/FURZE_logo-08.svg`} alt="Furze logo" width="114" in:fade={{delay: 250}}>
+        <img src={`/FURZE_logo-08.svg`} alt="Furze logo" width="114" in:fade={{delay: 250}}>
     </div>
     {/if}
 
@@ -22,6 +22,7 @@
             <div class="col-text" in:fade={{delay: 250}}>
                 <div>
                     <p>Furze Arts was founded in 2025 as an artist-led platform for residencies, site-specific exhibitions, and research-based workshops. It aims to create frameworks where art becomes a tool for ecological awareness and collective participation. </p>
+                    <br>
                     <p>Furze Arts is based on Hartwell farm in Kill, Kildare and works alongside Soearth Projects, an established space for creative arts therapies and environmental advocacy for the local community. Within the context of rural Ireland Furze Arts aims to create space for encounters between the local community and an international cohort of artists.</p>
                 </div>
                 <p><strong>
@@ -32,7 +33,7 @@
             </div>
             <div class="col" in:fade={{delay: 250}}>
                 <figure>
-                    <img src={`${base}/imgs/furze-archive.jpeg`} alt="Hartwell (1960)">
+                    <img src={`/imgs/furze-archive.jpeg`} alt="Hartwell (1960)">
                     <figcaption>Hartwell, Circa 1960</figcaption>
                 </figure>
             </div>

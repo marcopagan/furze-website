@@ -1,7 +1,6 @@
 <script lang="ts">
     import type { Slide } from '$lib/types/Slide';
     import { onMount } from 'svelte';
-    import { base } from '$app/paths';
 
     interface Props {
         slides: Slide[];
@@ -95,7 +94,7 @@
     >
         {#each slides as slide (slide.image)}
             <div class="carousel-slide">
-                <img src={`${base}${slide.image}`} alt={slide.alt}/>
+                <img src={`${slide.image}`} alt={slide.alt}/>
             </div>
         {/each}
     </div>

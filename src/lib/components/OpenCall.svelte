@@ -28,7 +28,7 @@
         </p>
 
         <p>
-            With this open call, we want to reach artists who get their hands dirty with gardens (both real and speculative) and their propagations, dealing in life, death and decay. We are interested in works and practices which take the garden –  in all its possible arrangements – as an entry point for the stories they want to tell. Think of orchards, farms, kitchen gardens, botanical gardens, secret gardens, forgotten fields, archival arcadia,and digital edens; overall, the garden as a lens through which to observe a process, investigate a systemic infrastructure, or question an established set of rules.
+            With this open call, we want to reach artists who get their hands dirty with gardens (both real and speculative) and their propagations, dealing in life, death and decay. We are interested in works and practices which take the garden –  in all its possible arrangements – as an entry point for the stories they want to tell. Think of orchards, farms, kitchen gardens, botanical gardens, secret gardens, forgotten fields, archival arcadia, and digital edens; overall, the garden as a lens through which to observe a process, investigate a systemic infrastructure, or question an established set of rules.
         </p>
 
         <p>
@@ -100,7 +100,8 @@
             font-style: italic;
             line-height: 1.2;
             height: 100%;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
             & p{padding-bottom: 1.75rem}
             & a{color: var(--fg);}
             & small{font-size: 1rem;}
